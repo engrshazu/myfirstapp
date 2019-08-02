@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<div class="container">
+<h1>this is article posting page</h1>
+
+<%=form_for @article do |s| %>
+
+<p>
+
+  <%= s.label :title %> <br>
+<%=s.text_field :title %>
+
+</p>
+
+<p>
+
+  <%=s.label :description %><br>
+
+  <%= s.text_area :description %>
+
+</p>
+<p>
+  <%=s.submit %>
+
+</p>
+
+<%end %>
+</div>
+</body>
+</html>
