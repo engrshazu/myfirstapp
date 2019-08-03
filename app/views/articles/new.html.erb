@@ -7,6 +7,17 @@
 </head>
 <body>
 <div class="container">
+  <%if @article.errors.any? %>
+    <ul>
+    <% @article.errors.full_messages.each do|msg| %>
+
+    <li><%=msg %></li>
+    <% end %>
+    </ul>
+  <%end %>
+
+
+
 <h1>this is article posting page</h1>
 
 <%=form_for @article do |s| %>

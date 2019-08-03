@@ -55,6 +55,19 @@
   </div>
 </nav>
 
+
+
+     <% flash.each do|name, msg| %>
+
+      <ul>
+        <li>
+          <%= msg %>
+        </li>
+
+      </ul>
+
+
+    <% end %>
     <!-- Page Content -->
     <%= yield %>
     <!-- Footer -->
